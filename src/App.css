@@ -1,38 +1,67 @@
-.App {
+:root {
+  --white: #fff5fd;
+  --color: #ff96ad;
+  --dark: #005a8d;
+  --very-dark: #022e57
+}
+
+* {
+  padding : 0;
+  margin : 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: byekan;
+  src: url(./font/BYekan.ttf)
+}
+
+body {
+  background-color: var(--white);
+  font-family: byekan;
+}
+
+header {
+  background-color: var(--color);
+  color: var(--very-dark);
   text-align: center;
+  font-weight: 900;
+  font-size: larger;
+  padding: 10px;
+  font-size: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: var(--very-dark);
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+  color: var(--white);
+  padding: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul li {
+  font-size: 25px;
+  padding: 10px;
+  border-bottom: var(--white) solid 1px;
+  list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li:hover {
+  background-color: var(--color);
+  color:var(--very-dark);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  background-color: var(--dark);
+  width: calc(100% - 200px);
+  height: calc(100% - 91px);
+  position:absolute;
+  buttom: 0;
 }
