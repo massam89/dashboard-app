@@ -22,13 +22,15 @@ body {
 }
 
 header {
-  background-color: var(--color);
-  color: var(--very-dark);
+  background-color: var(--dark);
+  color: var(--white);
   text-align: center;
   font-weight: 900;
   font-size: larger;
   padding: 10px;
   font-size: 25px;
+  text-shadow: 2px 2px var(--very-dark);
+
 }
 
 header h1 a {
@@ -43,6 +45,7 @@ nav {
   position: fixed;
   right: 0;
   text-align: right;
+  z-index: 2;
 }
 
 nav ul {
@@ -54,10 +57,7 @@ nav ul li {
   font-size: 25px;
   padding: 10px;
   border-bottom: var(--white) solid 1px;
-}
-
-nav ul li:link {
-  background-color: red;
+  list-style-type: none;
 }
 
 nav ul li:hover {
@@ -66,18 +66,17 @@ nav ul li:hover {
   cursor: pointer;
 }
 
-nav ul li:active {
-  background-color: red;
-}
-
 nav ul li a {
   text-decoration: none;
   color: var(--white);
   display: block;
 }
+nav ul li a:hover { 
+  color: var(--very-dark);
+}
 
 main {
-  background-color: var(--dark);
+  background-color: var(--color);
   width: calc(100% - 200px);
   height: calc(100% - 91px);
   position: absolute;
@@ -86,7 +85,99 @@ main {
 
 .homepage p {
   text-align: center;
-  color: var(--white);
+  color: var(--very-dark);
   font-size: 40px;
   margin-top: 100px;
+}
+
+.navbar-select {
+  background-color: var(--color);
+  position: relative;
+  left: -15px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-content: center;
+  
+}
+
+.search {
+  flex: 50%;
+  text-align: center;
+}
+
+.products-table {
+  flex :100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.add-product {
+  flex: 50%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+}
+
+button {
+	background-color:var(--very-dark);
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:var(--white);
+	font-size:17px;
+  padding: 5px;;
+	text-decoration:none;
+	font-family: byekan;
+}
+
+button:hover {
+	background-color:var(--dark);
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 0px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+table {
+  background-color: var(--dark);
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid var(--white);
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: var(--very-dark);
+}
+
+tr:nth-child(even) {
+  background-color: var(--white);
+}
+
+tr:nth-child(odd) {
+  color: var(--white);
 }

@@ -1,16 +1,19 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import {AppContext} from './AppContext'
 
 function Navbar() {
+  const { navbarSelect, setNavbarSelect} = useContext(AppContext)
+
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/">پیشخوان</Link>
+        <li className={navbarSelect === 'counter' ? 'navbar-select' : ''}>
+          <Link onClick={() => setNavbarSelect('counter')} to="/">پیشخوان</Link>
         </li>
 
-        <li>
-          <Link to="/products">محصولات</Link>
+        <li className={navbarSelect === 'products' ? 'navbar-select' : ''}>
+          <Link onClick={() => setNavbarSelect('products')} to="/products">محصولات</Link>
         </li>
 
         <li>مالی</li>
