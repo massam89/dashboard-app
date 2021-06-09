@@ -17,8 +17,9 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--color);
   font-family: byekan;
+  overflow: auto;
 }
 
 header {
@@ -30,7 +31,10 @@ header {
   padding: 10px;
   font-size: 25px;
   text-shadow: 2px 2px var(--very-dark);
-
+  position: fixed;
+  top: 0;
+  width: calc(100% - 200px);
+  z-index: 1;
 }
 
 header h1 a {
@@ -202,4 +206,9 @@ tr:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+i {
+  margin: 5px;
+  cursor: pointer;
 }

@@ -6,7 +6,8 @@ const Context = ({ children }) => {
  const [navbarSelect, setNavbarSelect] = useState('');
   const [productsList, setProductsList] = useState([
     {
-      name: 'lemon',
+      id: '1',
+      name: 'لیمو',
       imageURL: '#',
       weight: 10,
       weightPlus: 12,
@@ -16,7 +17,8 @@ const Context = ({ children }) => {
       status: 'coming soon'
     },
     {
-      name: 'apple',
+      id: '2',
+      name: 'سیب',
       imageURL: '#',
       weight: 5,
       weightPlus: 6,
@@ -26,7 +28,8 @@ const Context = ({ children }) => {
       status: 'available'
     },
     {
-      name: 'banana',
+      id: '3',
+      name: 'موز',
       imageURL: '#',
       weight: 2,
       weightPlus: 3,
@@ -37,6 +40,8 @@ const Context = ({ children }) => {
     }
   ])
 
+  const [searchText, setSearchText] = useState()
+
 
   return (
     <AppContext.Provider
@@ -44,7 +49,9 @@ const Context = ({ children }) => {
         navbarSelect,
         setNavbarSelect,
         productsList,
-        setProductsList
+        setProductsList,
+        searchText, 
+        setSearchText
       }}>
       {children}
     </AppContext.Provider>

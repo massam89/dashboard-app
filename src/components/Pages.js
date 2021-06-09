@@ -3,6 +3,7 @@ import Products from "./Products";
 import Home from "./Home";
 import AddProduct from './AddProduct'
 import {Route, Switch } from "react-router-dom";
+import SearchPage from './SearchPage'
 
 const Pages = () => {
   return (
@@ -19,6 +20,10 @@ const Pages = () => {
 
           <Route path="/add-product" exact>
             <AddProduct />
+          </Route>
+
+          <Route path="/search" exact>
+            <SearchPage />
           </Route>
         </Switch>
       </main>

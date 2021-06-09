@@ -2,7 +2,12 @@ import React, {useContext} from "react";
 import {AppContext} from './AppContext'
 
 const ProductsTable = () => {
-  const {productsList} = useContext(AppContext)
+  const {productsList, setProductsList} = useContext(AppContext)
+
+  const removeItem = (e) => {
+    const {id} = e.target.parentNode.parentNode; 
+    setProductsList(productsList.filter(item => item.id !== id))
+  }
 
   return (
     <div className="products-table">
@@ -16,9 +21,11 @@ const ProductsTable = () => {
         </tr>
 
         {productsList.map((item, index) => 
-        <tr key={index}>
-          
-          <td>ویرایش</td>
+        <tr key={index} id= {item.id}>
+          <td>
+          <i className="fas fa-edit"></i>
+          <i className="fas fa-trash-alt" onClick={removeItem}></i>
+          </td>
           <td>{item.price}</td>
           <td>{item.stock}</td>
           <td>{item.name}</td>
