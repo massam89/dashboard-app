@@ -212,3 +212,8 @@ i {
   margin: 5px;
   cursor: pointer;
 }
+
+.products-table a{
+ display: inline;
+ color: black
+}

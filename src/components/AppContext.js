@@ -42,6 +42,7 @@ const Context = ({ children }) => {
 
   const [searchText, setSearchText] = useState()
 
+  const [editProduct, setEditProduct] = useState()
 
   return (
     <AppContext.Provider
@@ -51,7 +52,9 @@ const Context = ({ children }) => {
         productsList,
         setProductsList,
         searchText, 
-        setSearchText
+        setSearchText,
+        editProduct,
+        setEditProduct
       }}>
       {children}
     </AppContext.Provider>

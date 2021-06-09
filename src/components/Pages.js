@@ -4,6 +4,7 @@ import Home from "./Home";
 import AddProduct from './AddProduct'
 import {Route, Switch } from "react-router-dom";
 import SearchPage from './SearchPage'
+import EditPage from './EditPage'
 
 const Pages = () => {
   return (
@@ -25,6 +26,11 @@ const Pages = () => {
           <Route path="/search" exact>
             <SearchPage />
           </Route>
+
+          <Route path="/edit-product" exact>
+            <EditPage />
+          </Route>
+
         </Switch>
       </main>
   );
