@@ -148,7 +148,7 @@ button:active {
 	top:1px;
 }
 
-input[type=text], select {
+input, select, option {
   width: 50%;
   padding: 12px 20px;
   margin: 0px 8px;
@@ -157,7 +157,8 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
   text-align: right;
-}
+  font-family: byekan;
+  }
 
 table {
   background-color: var(--dark);
@@ -180,4 +181,25 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   color: var(--white);
+}
+
+.add-product-page h2 {
+  text-align: center;
+  color: var(--white);
+  text-shadow: 2px 2px var(--very-dark);
+  background-color: var(--very-dark);
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.add-product-page button {
+  margin: 10px 0 0 10px;
+}
+
+.add-product-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

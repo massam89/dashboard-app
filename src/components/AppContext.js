@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const AppContext = React.createContext();
 
 const Context = ({ children }) => {
- const [navbarSelect, setNavbarSelect] = useState('counter');
+ const [navbarSelect, setNavbarSelect] = useState('');
   const [productsList, setProductsList] = useState([
     {
       name: 'lemon',
