@@ -13,6 +13,7 @@ const SearchPage = () => {
 
   useEffect(() => {
         setSearchedList(productsList.filter(item => item.name === searchText))
+        // eslint-disable-next-line 
   },[searchedList])
   
 

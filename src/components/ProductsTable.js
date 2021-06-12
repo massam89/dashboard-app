@@ -18,26 +18,31 @@ const ProductsTable = () => {
   return (
     <div className="products-table">
       <table>
-        <tr>
-          <th>ویراش/حذف</th>
-          <th>قیمت</th>
-          <th>موجودی</th>
-          <th>عنوان محصول</th>
-          <th>ردیف</th>
-        </tr>
-
-        {productsList.map((item, index) => 
-        <tr key={index} id= {item.id}>
-          <td>
-          <Link to='edit-product' onClick= {editClick}><i className="fas fa-edit"></i></Link>
-          <i className="fas fa-trash-alt" onClick={removeItem}></i>
-          </td>
-          <td>{item.price}</td>
-          <td>{item.stock}</td>
-          <td>{item.name}</td>
-          <td>{index+1}</td>
-        </tr>
-        )}
+        <thead>
+          <tr>
+            <th>ویراش/حذف</th>
+            <th>قیمت</th>
+            <th>موجودی</th>
+            <th>عنوان محصول</th>
+            <th>ردیف</th>
+          </tr>
+        </thead>
+     
+        <tbody>
+          {productsList.map((item, index) => 
+            <tr key={index} id= {item.id}>
+              <td>
+              <Link to='edit-product' onClick= {editClick}><i className="fas fa-edit"></i></Link>
+              <i className="fas fa-trash-alt" onClick={removeItem}></i>
+              </td>
+              <td>{item.price}</td>
+              <td>{item.stock}</td>
+              <td>{item.name}</td>
+              <td>{index+1}</td>
+            </tr>
+            )}
+        </tbody>
+       
         
       </table>
     </div>

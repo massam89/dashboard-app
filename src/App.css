@@ -59,7 +59,7 @@ nav ul {
 
 nav ul li {
   font-size: 25px;
-  padding: 10px;
+  margin: 10px 0;
   border-bottom: var(--white) solid 1px;
   list-style-type: none;
 }
@@ -129,6 +129,7 @@ a {
   text-decoration: none;
   color: var(--white);
   display: block;
+  padding: 5px;
 }
 
 button {
@@ -138,7 +139,6 @@ button {
 	cursor:pointer;
 	color:var(--white);
 	font-size:17px;
-  padding: 5px;;
 	text-decoration:none;
 	font-family: byekan;
 }
@@ -200,6 +200,7 @@ tr:nth-child(odd) {
 
 .add-product-page button {
   margin: 10px 0 0 10px;
+  padding: 5px 10px;
 }
 
 .add-product-page form {
